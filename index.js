@@ -7,8 +7,10 @@ const helmet = require('helmet');
 const cors = require('cors');
 const app = express();
 
+const isProd = process.env.NODE_ENV === 'production';
+
 // Middlewares
-app.use(morgan('common'));
+app.use(morgan(isProd ? 'combined' : 'dev'));
 app.use (helmet());
 app.use(cors());
 app.use(ratelimiter);

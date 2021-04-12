@@ -1,4 +1,4 @@
-const knexConfig = require("./knexfile");
+const knexConfig = require('./knexConfig');
 const knex = require('knex')(knexConfig);
 const csv = require('csv-parser');
 const https = require('https');
