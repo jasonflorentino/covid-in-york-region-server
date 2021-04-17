@@ -3,14 +3,14 @@ const knex = require('knex')(knexConfig);
 const csv = require('csv-parser');
 const https = require('https');
 
-const results = [];
-const url = 'https://ww4.yorkmaps.ca/COVID19/Data/YR_CaseData.csv';
+const RESULTS = [];
+const URL = 'https://ww4.yorkmaps.ca/COVID19/Data/YR_CaseData.csv';
 
-https.get(url, res => {
+https.get(URL, res => {
   res.pipe(csv())
-     .on('data', data => results.push(data))
+     .on('data', data => RESULTS.push(data))
      .on('end', () => {
-       updateDbAsync(results)
+       updateDbAsync(RESULTS)
         .then(() => process.exit())
         .catch(e => console.error(e))
      })
