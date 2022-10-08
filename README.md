@@ -1,4 +1,5 @@
 # Covid In York (Server)
+*(Deprecated)*
 
 This was the application that backed https://covidinyork.netlify.app until I shut it down on Oct 8 2022.
 
