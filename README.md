@@ -4,7 +4,7 @@ This was the application that backed https://covidinyork.netlify.app until I shu
 
 A daily job would run (`create_new_daily.js`) that scraped the day's data from York Region and inserted it into a DB.
 
-I've replaced the original seed data with all the data we had upon shutdown: `seed_data/dailies.js`
+I've now made this repo public and replaced the original seed data with all the data we had upon shutdown: `seed_data/dailies.js` for anyone that wants it.
 
 Code for the frontend application can be found here: https://github.com/jasonflorentino/covid-in-york-region
 
